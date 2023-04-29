@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "792886137952",
+    "project_id": "fir-chat-4843a",
+    "storage_bucket": "fir-chat-4843a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792886137952:android:09225f6d54c878a67cdf05",
+        "android_client_info": {
+          "package_name": "com.mazeppa.firebasechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792886137952-3oa05s1mn4qsdbkgo5f3a5bfoqb31fk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZBb22rKExARtrfxLORZn6-JMPOnh0vTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "792886137952-3oa05s1mn4qsdbkgo5f3a5bfoqb31fk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
