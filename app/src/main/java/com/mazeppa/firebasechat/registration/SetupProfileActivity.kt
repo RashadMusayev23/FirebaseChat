@@ -31,26 +31,26 @@ class SetupProfileActivity : AppCompatActivity() {
                 binding.imageViewProfileImage.setImageURI(uri)
                 selectedImage = uri
 
-                val time = Date().time
-                val reference = storage.reference
-                    .child("Profile")
-                    .child(time.toString())
-                reference.putFile(uri).addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        reference.downloadUrl.addOnCompleteListener { uri ->
-                            val filePath = uri.toString()
-                            val obj = HashMap<String, Any>()
-                            obj["image"] = filePath
-                            database.reference
-                                .child("users")
-                                .child(auth.uid!!)
-                                .updateChildren(obj)
-                                .addOnSuccessListener {
-
-                                }
-                        }
-                    }
-                }
+//                val time = Date().time
+//                val reference = storage.reference
+//                    .child("Profile")
+//                    .child(time.toString())
+//                reference.putFile(uri).addOnCompleteListener { task ->
+//                    if (task.isSuccessful) {
+//                        reference.downloadUrl.addOnCompleteListener { uri ->
+//                            val filePath = uri.result.toString()
+//                            val obj = HashMap<String, Any>()
+//                            obj["image"] = filePath
+//                            database.reference
+//                                .child("users")
+//                                .child(auth.uid!!)
+//                                .updateChildren(obj)
+//                                .addOnSuccessListener {
+//
+//                                }
+//                        }
+//                    }
+//                }
             }
         }
     private lateinit var selectedImage: Uri
@@ -84,7 +84,7 @@ class SetupProfileActivity : AppCompatActivity() {
                     reference.putFile(selectedImage).addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             reference.downloadUrl.addOnCompleteListener { uri ->
-                                val imageUrl = uri.toString()
+                                val imageUrl = uri.result.toString()
                                 val uid = auth.uid
                                 val phoneNumber = auth.currentUser!!.phoneNumber
                                 val name = editTextUserName.text.toString()
