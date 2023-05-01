@@ -55,4 +55,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx:21.2.2'
     implementation 'com.google.firebase:firebase-messaging-ktx:23.1.2'
 
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
+
 }

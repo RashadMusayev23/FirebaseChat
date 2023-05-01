@@ -3,4 +3,9 @@
     <string name="enter_phone_number">Enter Phone Number</string>
     <string name="continue_button">Continue</string>
     <string name="enter_otp">Enter OTP</string>
+
+    <string name="web_client_id">317042212779-n95t1aub4gjouidjhpvrq1654phd0bvi.apps.googleusercontent.com</string>
+    <string name="google_sign_in">Google Sign-In</string>
+    <string name="google_sign_in_firebase">Google Sign In Firebase</string>
+    <string name="username">Username</string>
 </resources>
