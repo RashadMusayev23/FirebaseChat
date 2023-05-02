@@ -12,6 +12,7 @@ import com.mazeppa.firebasechat.model.User
  */
 class UserAdapter(
     private val users: ArrayList<User>,
+    private val onClickListener: (User) -> Unit,
 ) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     class UserViewHolder(val binding: ItemProfileBinding) : RecyclerView.ViewHolder(binding.root)
@@ -25,8 +26,13 @@ class UserAdapter(
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val user = users[position]
-        holder.binding.textViewUserName.text = user.name
-        println("Profile Image ${user.profileImage}")
-        holder.binding.imageViewProfileImage.load(user.profileImage)
+        holder.binding.apply {
+            textViewUserName.text = user.name
+            imageViewProfileImage.load(user.profileImage)
+
+            root.setOnClickListener {
+                onClickListener(user)
+            }
+        }
     }
 }

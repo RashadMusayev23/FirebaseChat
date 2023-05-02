@@ -15,6 +15,9 @@
         android:theme="@style/Theme.FirebaseChat"
         tools:targetApi="31">
         <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".registration.SetupProfileActivity"
             android:exported="false" />
         <activity

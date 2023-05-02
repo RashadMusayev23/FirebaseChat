@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.mazeppa.firebasechat.MainActivity
 import com.mazeppa.firebasechat.R
 import com.mazeppa.firebasechat.databinding.ActivityVerificationBinding
+import com.mazeppa.firebasechat.util.IntentExtras
 
 
 class VerificationActivity : AppCompatActivity() {
@@ -69,7 +70,7 @@ class VerificationActivity : AppCompatActivity() {
 
             if (phoneNumber.isNotEmpty()) {
                 startActivity(Intent(this@VerificationActivity, OTPActivity::class.java).apply {
-                    putExtra("phoneNumber", phoneNumber)
+                    putExtra(IntentExtras.PHONE_NUMBER, phoneNumber)
                 })
             } else {
                 Toast.makeText(this@VerificationActivity, "Enter Phone Number", Toast.LENGTH_SHORT)

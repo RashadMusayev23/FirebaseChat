@@ -1,7 +1,6 @@
 package com.mazeppa.firebasechat.registration
 
 import android.content.Intent
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -11,8 +10,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
-import com.mazeppa.firebasechat.MainActivity
 import com.mazeppa.firebasechat.databinding.ActivityOtpactivityBinding
+import com.mazeppa.firebasechat.util.IntentExtras
 import java.util.concurrent.TimeUnit
 
 class OTPActivity : AppCompatActivity() {
@@ -39,7 +38,7 @@ class OTPActivity : AppCompatActivity() {
      * Sends OTP to the phone number user entered in the [VerificationActivity] screen.
      */
     private fun sendOTP() {
-        val phoneNumber = intent.getStringExtra("phoneNumber") ?: ""
+        val phoneNumber = intent.getStringExtra(IntentExtras.PHONE_NUMBER) ?: ""
         val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(p0: PhoneAuthCredential) {
                 Toast.makeText(this@OTPActivity, "Verification Completed", Toast.LENGTH_SHORT)

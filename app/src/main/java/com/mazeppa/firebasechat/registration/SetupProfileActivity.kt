@@ -11,7 +11,6 @@ import com.google.firebase.storage.FirebaseStorage
 import com.mazeppa.firebasechat.MainActivity
 import com.mazeppa.firebasechat.databinding.ActivitySetupProfileBinding
 import com.mazeppa.firebasechat.model.User
-import java.util.Date
 
 class SetupProfileActivity : AppCompatActivity() {
 

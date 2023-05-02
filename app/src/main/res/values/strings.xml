@@ -8,4 +8,11 @@
     <string name="google_sign_in">Google Sign-In</string>
     <string name="google_sign_in_firebase">Google Sign In Firebase</string>
     <string name="username">Username</string>
+    <string name="message">Message</string>
+    <string name="delete_for_everyone">Delete For Everyone</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_for_me">Delete For Me</string>
+    <string name="delivery_status">delivery status</string>
+
+    <string name="delete_message">Delete Message</string>
 </resources>

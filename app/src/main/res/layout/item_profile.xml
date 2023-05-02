@@ -17,6 +17,8 @@
             android:id="@+id/imageViewProfileImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
             android:src="@color/black" />
 
         <TextView
